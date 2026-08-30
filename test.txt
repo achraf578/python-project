@@ -1,0 +1,96 @@
+import calculator
+
+num1=float(input("enter a number: "))
+signe=input("enter a signe: ")
+num2=float(input("enter a number: "))
+
+if signe == "+":
+    x=calculator.add(num1, num2)
+elif signe == "-":
+    x=calculator.sub(num1, num2)
+elif signe == "*":
+    x=calculator.mult(num1, num2)
+elif signe == "/":
+    try:
+        x=calculator.div(num1, num2)
+    except ZeroDivisionError:
+        x=None
+        print("that can't be done!")
+else:
+    x=None
+    print("we don't do that here!")
+
+if x != None:
+    print(x)
+else:
+    exit
+
+
+
+
+
+
+
+
+
+
+
+students = [
+
+    {"name": "Omar", "grades": [15, 17, 12]},
+
+    {"name": "Yasser", "grades": [8, 11, 7]},
+
+    {"name": "Ali", "grades": [18, 16, 19]},
+
+]
+
+for x, student in enumerate(students, start=1):
+
+    print(f"{x}-{student['name']}: {student['grades']}")
+
+for student in students:
+
+    average=(student["grades"][0]+student["grades"][1]+student["grades"][2])/3
+
+    print(average)
+
+    student["average"]=average
+
+    if average>=10:
+
+        print("pass")
+
+    else:
+
+        print("fail")
+
+print(any(student["average"]>=18 for student in students))
+
+print(all(student["average"]>=10 for student in students))
+
+gradess=[]
+
+for student in students:
+
+    for grade in student["grades"]:
+
+        gradess.append(grade)
+
+        unique_grades=set(gradess)
+
+print(unique_grades)
+
+name_search=input("enter student name: ")
+
+for student in students:
+
+    if name_search == student["name"]:
+
+        print(student)
+
+        break
+
+    else:
+
+        print("student not found!!")

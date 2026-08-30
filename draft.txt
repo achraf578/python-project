@@ -1,0 +1,3 @@
+    {"name": "Omar", "grades": [15, 17, 12]},
+    {"name": "Yasser", "grades": [8, 11, 7]},
+    {"name": "Ali", "grades": [18, 16, 19]},
