@@ -21,7 +21,7 @@ if answer == "yes":
     with open ('student list.json', 'w') as file:
         json.dump(students, file)
 else:
-    print("Ok!")
+    print("Okay!")
 
 with open ('student list.json', 'r') as file:
     students=json.load(file)
