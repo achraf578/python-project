@@ -16,7 +16,7 @@ while start is True:
             try:
                 result = calculator.div(number1, number2)
             except ZeroDivisionError:
-                result = None
+                result = number1  # Keep the first number as the result if division by zero occurs
                 print("Error: Division by zero is not allowed.")
         else:
             result = number1  # Default to the first number if the operator is invalid
