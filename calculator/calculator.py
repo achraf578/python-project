@@ -23,9 +23,9 @@ def mult(*numbers):
     return total
 
 def div(*numbers):
-    total=0
-    
-    for number in numbers:
+    total=numbers[0]
+
+    for number in numbers[1:]:
         total/=number
     
     return total
